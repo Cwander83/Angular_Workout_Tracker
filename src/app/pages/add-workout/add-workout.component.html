@@ -1,0 +1,51 @@
+<h2 class="add-workout-title">New Workout</h2>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="day">Date: </label>
+    <input required [(ngModel)]="date" type="date" name="date" id="date" />
+  </div>
+  <div class="form-control">
+    <label for="exercise">Exercise: </label>
+    <input
+      required
+      [(ngModel)]="exercise"
+      type="text"
+      name="exercise"
+      id="exercise"
+    />
+  </div>
+  <div class="form-control">
+    <label for="set">Set: </label>
+    <input
+      required
+      [(ngModel)]="set"
+      type="number"
+      name="set"
+      id="set"
+      pattern="\d*"
+    />
+  </div>
+  <div class="form-control">
+    <label for="reps">Reps: </label>
+    <input
+      required
+      [(ngModel)]="reps"
+      type="number"
+      name="reps"
+      id="reps"
+      pattern="\d*"
+    />
+  </div>
+  <div class="form-control">
+    <label for="weight">Weight: </label>
+    <input
+      required
+      [(ngModel)]="weight"
+      type="number"
+      name="weight"
+      id="weight"
+      pattern="\d*"
+    />
+  </div>
+  <input type="submit" value="Submit" />
+</form>
